@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="687.0" prefWidth="929.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demowithfxhibernate.HelloController">
+   <children>
+      <TabPane layoutX="37.0" layoutY="49.0" prefHeight="613.0" prefWidth="869.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab id="carsTab" text="Cars">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="carsTable" layoutX="14.0" layoutY="14.0" prefHeight="304.0" prefWidth="838.0">
+                          <columns>
+                            <TableColumn fx:id="idColumn" prefWidth="75.0" text="#" />
+                            <TableColumn fx:id="brandColumn" prefWidth="137.0" text="Brand" />
+                              <TableColumn fx:id="modelColumn" prefWidth="219.0" text="Model" />
+                              <TableColumn fx:id="priceColumn" prefWidth="195.0" text="Price per day" />
+                              <TableColumn fx:id="retiredColumn" prefWidth="211.0" text="Retired" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="carBrandTextField" layoutX="14.0" layoutY="379.0" promptText="Brand" />
+                        <TextField fx:id="carModelTextField" layoutX="14.0" layoutY="416.0" promptText="Model" />
+                        <TextField fx:id="carPriceTextField" layoutX="14.0" layoutY="453.0" promptText="Price" />
+                        <ToggleButton fx:id="carRetiredToggle" layoutX="14.0" layoutY="497.0" mnemonicParsing="false" text="Retired" />
+                        <Button fx:id="saveNewCarButton" onAction="#saveNewCarButtonWasClicked" layoutX="199.0" layoutY="379.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="119.0" text="Save new Car" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab id="customersTab" text="Customers">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+          <Tab id="bookingsTab" text="Bookings">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
